@@ -5,7 +5,7 @@
 :root {
 
     --primary: #FFB900;
-    --font-heading: Sen, sans-serif;
+    --font-heading: "Helvetica Neue", sans-serif;
 }
 
 html {
@@ -39,8 +39,9 @@ a{
 }
 
 .heading.lv1 {
-    font-size: 5.8rem;
-    line-height: 1.17;
+    font-family: "Dancing Script";
+    font-size: 10rem;
+    line-height: 1.3;
     letter-spacing: -1.16px;
 }
 
@@ -53,6 +54,7 @@ a{
 .desc{
     color: #5F5B53;
     font-weight: 400;
+    text-align: justify;
 }
 
 .btn {
@@ -64,14 +66,21 @@ a{
 .btn.black {
     background-color: #171100;
     border-radius: 25px;
+    transition: 0.3s;
 }
 
+.btn.black:hover {
+    background-color: var(--primary);
+}
+
+
 .btn.yellow {
-    background-color: var(--primary)
+    background-color: var(--primary);
+    transition: 0.3s;
 }
 
 .btn:hover {
-    opacity: 0.9;
+    opacity: 0.8
 }
 
 .line-clamp {
@@ -96,23 +105,24 @@ a{
 .header {
     background: #FFFCF4;
     padding: 8px 0;
+    box-shadow: 0px 3px 30px rgba(167, 162, 146, 0.25);
 }
 
 .fixed {
     position: sticky;
-    top: -28px;
+    top: -1px;
     z-index: 1;
 }
 
 .header .body {
     display: flex;
     align-items: center;
-    margin-top: 28px;
+    margin-top: 1px;
 }
 
 .header .body .logo {
-    width: 85px;
-    height: 34px;
+    width: 120px;
+    height: 80px;
 }
 
 .header .body .nav {
@@ -126,14 +136,14 @@ a{
 .header .body .nav a {
     position: relative;
     padding: 8px 21px;
-    color: #5F5B53;
+    color: #808080;
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.header .body .nav a:hover {
-    color: #171100;
-    text-shadow: 1px 0 0 currentColor;
+.header .nav a:hover {
+    color: black;
 }
 
 .header .body .action .black {
@@ -234,11 +244,17 @@ a{
 /* Hero right */
 .hero .content-block {
     width: 51.3%;
-    padding: 64px 0 0 130px;
+    padding: 64px 0 0 100px;
 }
 
 .hero .content-block .lv1 {
-    font-size: 5.6rem;
+    text-align: center;
+    font-size: 9rem;
+}
+
+.hero .content-block .lv2 {
+    text-align: center;
+    font-size: 3rem;
 }
 
 .hero .content-block .desc {
@@ -261,64 +277,16 @@ a{
     line-height: 1.67;
 }
 
-.hero .content-block .cta-group .watch-video {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    border: none;
-    background: #FFFCF4;;
-    margin-left: 28px;
-    cursor: pointer;
-}
-
-.hero .content-block .cta-group .watch-video .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #FFF;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
-}
-
-.hero .content-block .cta-group .watch-video span {
-    margin-left: 14px;
-    color: #171100;
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 1.67
-}
-
 .hero .content-block .more .desc:first-child{
     margin-top: 48px;
-}
-
-.hero .content-block .more .desc {
-    margin-top: 8px;
-    font-size: 1.8rem;
-    line-height: 1.67;
-}
-
-.hero .content-block .more .desc strong {
-    color: #171100;
-    padding: 0 5px 0 28px;
-    font-family: var(--font-heading);
-    font-size: 4.4rem;
-    font-weight: 700;
-    line-height: 1.23;
-}
-
-.hero .content-block .more .desc strong:first-child {
-    padding-left: 0;
 }
 
 
 
 /* Popular */
 .popular {
-    padding-top: 65px;
-    margin-top: 135px;
+    padding-top: 100px;
+    margin-top: 50px;
 }
 
 
@@ -330,10 +298,10 @@ a{
 }
 
 .popular-top .info .desc {
-    margin-top: 16px;
-    width: 458px;
+    margin-top: 10px;
+    width: 800px;
     color: #5F5B53;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.67;
 }
 
@@ -363,7 +331,7 @@ a{
 
 /* Popular bottom */
 .popular-bottom {
-    margin-top: 55px;
+    margin-top: 30px;
     display: flex;
 }
 
@@ -380,7 +348,7 @@ a{
 
 .popular-bottom .item .thumb {
     width: 370px;
-    height: 278px;
+    height: 320px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -771,6 +739,9 @@ a{
 
 
 /* Column 1 */
+.footer .row-1 .column-1 {
+    text-align: center;
+}
 .footer .row-1 .column-1 .desc {
     padding:18px 0;
     color: #BFBCB2;
@@ -784,6 +755,15 @@ a{
     gap: 18px;
 }
 
+.footer .row-1 .column-1 .logo {
+    width: 150px;
+    height: 100px;
+}
+
+.footer .row-1 .column-1 .icon {
+    width: 20px;
+    height: 20px;
+}
 
 
 /* Column 2 */
@@ -915,7 +895,7 @@ a{
     padding-bottom: 28px;
     color: #807D74;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.86;
 }
